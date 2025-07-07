@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Results for: {{ query }}</h1>
+    <ul>
+        {% for url, score in results.items() %}
+            <li><a href="{{ url }}">{{ url }}</a> - Score: {{ score }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Search</a>
+</body>
+</html>
